@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Moje autorskie zdjęcia</title>
+    <script>
+      function dodajZdjecie() {
+        var url = document.getElementById("urlInput").value;
+        var galeria = document.getElementById("galeria");
+
+        var noweZdjecie = document.createElement("img");
+        noweZdjecie.src = url;
+        noweZdjecie.alt = "Moje zdjęcie";
+
+        galeria.appendChild(noweZdjecie);
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Moje autorskie zdjęcia</h1>
+
+    <input type="text" id="urlInput" placeholder="Wprowadź URL obrazu" />
+    <button onclick="dodajZdjecie()">Dodaj zdjęcie</button>
+
+    <div id="galeria"></div>
+  </body>
+</html>
